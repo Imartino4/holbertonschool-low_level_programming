@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - printing size of various types
+ * main - Printing size of various types
  *
  * Return - Always 0
  */
