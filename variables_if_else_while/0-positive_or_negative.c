@@ -6,11 +6,12 @@
  */
 int main(void)
 {
+	srand(time(0));
 	int n = rand();
 
 	if (n > 0)
 	{
-		printf("%d is possitive\n", n);
+		printf("%d is positive\n", n);
 	}
 	else if (n < 0)
 	{
