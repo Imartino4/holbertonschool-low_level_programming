@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
- * Using puts
+ * main - print Programmins is like building a multilingual puzzle
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
