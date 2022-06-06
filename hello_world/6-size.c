@@ -2,7 +2,7 @@
 /**
  * main - Printing size of various types
  *
- * Return - Always 0 (Success)
+ * Return: 0 - Always 0
  */
 int main(void)
 {
