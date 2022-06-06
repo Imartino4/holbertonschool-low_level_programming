@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - Print alphabet in lower and uppercases
- * Resturn: 0 - Always
+ * Return: 0 - Always
  */
 int main(void)
 {
@@ -18,4 +18,3 @@ int main(void)
 	putchar('\n');
 return (0);
 }
- 
