@@ -11,9 +11,9 @@ int main(void)
 
 	for (n1 = 48; n1 <= 55; n1++)
 	{
-		for (n2 = n1 + 1; n1 <= 56; n2++)
+		for (n2 = n1 + 1; n2 <= 56; n2++)
 		{
-			for (n3 = n2 + 1; n3 <= 58; n3++)
+			for (n3 = n2 + 1; n3 <= 57; n3++)
 			{
 				putchar(n1);
 				putchar(n2);
