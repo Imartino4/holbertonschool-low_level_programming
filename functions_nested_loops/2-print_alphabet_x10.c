@@ -3,7 +3,7 @@
  * print_alphabet_x10 - Prototype of print the alphabet x times
  * Return: - always
  */
-void print_alphabet_x10(void)
+int print_alphabet_x10(void)
 {
 	char i, j;
 
@@ -15,5 +15,5 @@ void print_alphabet_x10(void)
 		}
 		_putchar('\n');
 	}
-	return;
+	return (0);
 }
