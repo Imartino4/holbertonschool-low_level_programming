@@ -12,28 +12,30 @@ void times_table(void)
 	{
 		for (j = 0; j <= 9; j++)
 		{
-			if ((i * j) < 10)
+			if (j == 0)
 			{
-				_putchar ((i * j) + '0');
+				_putchar(j + '0');
 			}
 			else
 			{
-				_putchar (((i * j) / 10) + '0');
-				_putchar(((i * j) % 10) + '0');
-			}
-			if (j < 9)
-			{
-				_putchar(44);
-				_putchar(32);
-			
 				if ((i * j) < 10)
 				{
+					_putchar(44);
 					_putchar(32);
+					_putchar(32);
+					_putchar ((i * j) + '0');
 				}
-			}
-			else
-			{
-				_putchar('\n');
+				else
+				{
+					_putchar(44);
+					_putchar(32);
+					_putchar(((i * j) / 10) + '0');
+					_putchar(((i * j) % 10) + '0');
+				}
+				if (j == 9)
+				{
+					_putchar('\n');
+				}
 			}
 		}
 		j = 0;
