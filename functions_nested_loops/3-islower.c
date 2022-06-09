@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _ilsower - return 1 if the input is a lowercase and 0 otherwise.
+ * _islower - return 1 if the input is a lowercase and 0 otherwise.
  * @c: int to be checked
  *
  * Description: _islower evaluate c if is a lowercase or not
