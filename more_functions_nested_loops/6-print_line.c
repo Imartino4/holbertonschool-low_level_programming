@@ -7,7 +7,7 @@
  * Description - print n lines
  * Return: void
  */
-void print_lines(int n)
+void print_line(int n)
 {
 	int i;
 
