@@ -21,11 +21,11 @@ void print_triangle(int n)
 	{
 		for (i = 0; i < n; i++)
 		{
-			for (j = 0; j < (n - j); j++)
+			for (j = 0; j < (n - i - 1); j++)
 			{
 				_putchar(32);
 			}
-			for (k = (n - i); k <= n; k++)
+			for (k = (i + 1); k <= n; k++)
 			{
 				_putchar('#');
 			}
