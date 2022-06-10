@@ -2,6 +2,9 @@
 
 /**
  * main - causes an infinite loop
+ * @'\\o/n': char
+ *
+ * Description - infinite loop debug
  * Return: 0
  */
 
