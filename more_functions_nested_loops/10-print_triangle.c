@@ -13,7 +13,7 @@ void print_triangle(int n)
 	int j;
 	int k;
 
-	if ( n <= 0)
+	if (n <= 0)
 	{
 		_putchar('\n');
 	}
@@ -25,7 +25,7 @@ void print_triangle(int n)
 			{
 				_putchar(32);
 			}
-			for (k = (n-i); k <= n; k++)
+			for (k = (n - i); k <= n; k++)
 			{
 				_putchar('#');
 			}
