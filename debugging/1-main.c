@@ -2,9 +2,7 @@
 
 /**
  * main - causes an infinite loop
- * @'\\o/n': char
  *
- * Description - infinite loop debug
  * Return: 0
  */
 
@@ -20,7 +18,7 @@ int main(void)
 *	{
 *		putchar(i);
 *	}
- */
+*/
 	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);
