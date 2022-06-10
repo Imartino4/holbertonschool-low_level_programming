@@ -2,7 +2,7 @@
 
 /**
  * print_numbers - print number from 0 to 9
- * 
+ *
  * Description - print number from 0 to 9 using putchar
  * Return: void
  */
