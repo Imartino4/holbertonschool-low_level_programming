@@ -19,7 +19,7 @@ int main(void)
 		fib = n1 + n2 ;
 		n1 = n2;
 		n2 = fib;
-		if (n < 96)
+		if (i < 96)
 		{
 			printf("%.0Lf, ", fib);
 		}
