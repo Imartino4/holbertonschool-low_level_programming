@@ -11,7 +11,7 @@ int main(void)
 	long int Fib;
 
 	printf("1, 2, ");
-	for (i = 3; i <=50; i++)
+	for (i = 3; i <= 50; i++)
 	{
 		Fib = n1 + n2;
 		n1 = n2;
@@ -23,6 +23,7 @@ int main(void)
 		else
 		{
 			printf("%ld\n", Fib);
+		}
 	}
 	return (0);
 }
