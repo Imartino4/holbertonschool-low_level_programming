@@ -16,7 +16,7 @@ int main(void)
 		Fib = n1 + n2;
 		n1 = n2;
 		n2 = Fib;
-		if (n != 50)
+		if (i != 50)
 		{
 			printf("%ld, ", Fib);
 		}
