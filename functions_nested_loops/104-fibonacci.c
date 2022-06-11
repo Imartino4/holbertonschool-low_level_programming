@@ -12,7 +12,6 @@ int main(void)
 	long double fib;
 
 	printf("1, 2, ");
-
 	for (i = 1; i <= 96; i++)
 	{
 		fib = n2 + n1;
