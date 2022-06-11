@@ -7,9 +7,9 @@
 int main(void)
 {
 	int i;
-	unsigned long n1 = 1;
-	unsigned long n2 = 2;
-	unsigned long fib;
+	long double n1 = 1;
+	long double n2 = 2;
+	long double fib;
 	printf("1, 2, ");
 
 	for (i = 1; i <= 98; i++)
@@ -17,7 +17,7 @@ int main(void)
 		fib = n2 + n1;
 		n1 = n2;
 		n2 = fib;
-		printf("%lu, ", fib);
+		printf("%.0Lf, ", fib);
 	}
 	printf("\n");
 	return (0);
