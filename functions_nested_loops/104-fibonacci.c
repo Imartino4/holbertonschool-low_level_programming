@@ -2,7 +2,7 @@
 
 /**
  * main - Fibonacci of 98
- * Return: 0 
+ * Return: 0
  */
 int main(void)
 {
@@ -10,8 +10,9 @@ int main(void)
 	unsigned long n1 = 1;
 	unsigned long n2 = 2;
 	unsigned long fib;
+	printf("1, 2, ");
 
-	for (i = 1; i <=98; i++)
+	for (i = 1; i <= 98; i++)
 	{
 		fib = n2 + n1;
 		n1 = n2;
