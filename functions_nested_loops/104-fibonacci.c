@@ -10,9 +10,10 @@ int main(void)
 	long double n1 = 1;
 	long double n2 = 2;
 	long double fib;
+
 	printf("1, 2, ");
 
-	for (i = 1; i <= 98; i++)
+	for (i = 1; i <= 96; i++)
 	{
 		fib = n2 + n1;
 		n1 = n2;
