@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - update the value of a parameterusing pointer
- * @*n: - int pointer
+ * @n: - int pointer
  *
  * Description - update the value of a parameter
  * Return: void
