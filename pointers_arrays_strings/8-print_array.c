@@ -18,7 +18,6 @@ void print_array(int *a, int n)
 	if (j != n)
 	{
 		printf("\n");
-		break;
 	}
 	for (i = 0; i < n; i++)
 	{
