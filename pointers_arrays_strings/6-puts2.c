@@ -16,7 +16,7 @@ void puts2(char *str)
 	}
 	for (j = 0; j <= i; j = j + 2)
 	{
-		if (s[j] != '\0')
+		if (str[j] != '\0')
 		{
 			_putchar(str[j]);
 		}
