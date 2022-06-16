@@ -4,7 +4,7 @@
  * @a: int
  * @n: int
  *
- * Description - 
+ * Description -
  * Return: void
  */
 void reverse_array(int *a, int n)
@@ -13,7 +13,7 @@ void reverse_array(int *a, int n)
 
 	if (n > 0)
 	{
-	
+
 		for (i = 0; i <= n / 2; i++)
 		{
 		aux = a[i];
