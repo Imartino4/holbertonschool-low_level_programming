@@ -8,7 +8,7 @@
  ** Description -
  ** Return: char
  **/
-char *_strncpy(char *dest,char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i, j;
 
@@ -18,7 +18,7 @@ char *_strncpy(char *dest,char *src, int n)
 	{
 		for (i = 0; i < j; i++)
 			dest[i] = src[i];
-		for (i = j; i <= n; i++)
+		for (i = j; i < n; i++)
 			dest[i] = '\0';
 	}
 	else if (j > n)
