@@ -13,12 +13,15 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; s[i] != '\0'; i++) /*Obtengo largo de s - i*/
 		;
-	for (j = 0; s[j] != '\0'; j++)/*Obtengo primera aparicion de c - j*/
+	if (c != '\0')
 	{
-		if (s[j] == c)
+		for (j = 0; s[j] != '\0'; j++)
 		{
-			s = s + j;
-			break;
+			if (s[j] == c)
+			{
+				s = s + j;
+				break;
+			}
 		}
 	}
 	if (j < i)
