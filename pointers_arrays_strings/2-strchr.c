@@ -9,14 +9,20 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i, j, k;
+	int i, j;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++) /*Obtengo largo de s - i*/
 		;
-	for (j = 0; s[j] != c; j++)
-		;
-	for (k = j; k < i; k++)
-		s[k - j] = s[k];
-	s[i] = '\0';
-	return (s);
+	for (j = 0; s[j] != '\0'; j++)/*Obtengo primera aparicion de c - j*/
+	{
+		if (s[j] == c)
+		{
+			s = s + j;
+			break;
+		}
+	}
+	if (j < i)
+		return (s);
+	else
+		return ('\0');
 }
