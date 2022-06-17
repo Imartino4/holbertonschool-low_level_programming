@@ -24,7 +24,7 @@ char *_strchr(char *s, char c)
 			}
 		}
 	}
-	if (j < i)
+	if (j < i && c != '\0')
 		return (s);
 	else
 		return ('\0');
