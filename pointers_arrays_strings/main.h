@@ -20,3 +20,4 @@ char *_strchr(char *s, char c);
 char *string_toupper(char *);
 char *cap_string(char *);
 unsigned int _strspn(char *s, char *accept);
+char *_strpbrk(char *s, char *accept);
