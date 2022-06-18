@@ -18,7 +18,7 @@ char *_strstr(char *haystack, char *needle)
 		;
 	for (l2 = 0; haystack[l2] != '\0'; l2++)
 		;
-	while ((needle[j] != '\0') && (haystack[i] != '\0'))
+	while (needle[j] != '\0')/*&& (haystack[i] != '\0'))*/
 	{
 		if (needle[j] == haystack[i])
 			j++;
@@ -27,7 +27,7 @@ char *_strstr(char *haystack, char *needle)
 		i++;
 	}
 	/*printf("\ni=%d\nj=%d\nl1=%d\nl2=%d\n", i, j, l1, l2);*/
-	if (needle[j + 1] == '\0')
+	if (needle[j] == '\0')
 	{
 		haystack = haystack + i - j;
 		return (haystack);
