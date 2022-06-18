@@ -10,13 +10,15 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, k;
+	int i, j, l1, l2;
 
 	i = 0;
 	j = 0;
-	for (k = 0; needle[k] != '\0'; k++)
+	for (l1 = 0; needle[l1] != '\0'; l1++)
 		;
-	while ((needle[j] != '\0'))
+	for (l2 = 0; haystack[l2] != '\0'; l2++)
+		;
+	while ((needle[j] != '\0') && (haystack[i] != '\0'))
 	{
 		if (needle[j] == haystack[i])
 			j++;
@@ -24,10 +26,12 @@ char *_strstr(char *haystack, char *needle)
 			j = 0;
 		i++;
 	}
-	/**printf("\n%d\n%d\n", i, j);*/
-	haystack = haystack + i - j;
-	if (j == k)
+	printf("\ni=%d\nj=%d\nl1=%d\nl2=%d\n", i, j, l1, l2);
+	if (needle[j + 1] == '\0')
+	{
+		haystack = haystack + i - j;
 		return (haystack);
+	}
 	else
-		return (NULL);
+		return ('\0');
 }
