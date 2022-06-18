@@ -29,5 +29,5 @@ char *_strstr(char *haystack, char *needle)
 	if (j == k)
 		return (haystack);
 	else
-		return ('\0');
+		return (NULL);
 }
