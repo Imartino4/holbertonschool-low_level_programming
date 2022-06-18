@@ -26,7 +26,7 @@ char *_strstr(char *haystack, char *needle)
 			j = 0;
 		i++;
 	}
-	printf("\ni=%d\nj=%d\nl1=%d\nl2=%d\n", i, j, l1, l2);
+	/*printf("\ni=%d\nj=%d\nl1=%d\nl2=%d\n", i, j, l1, l2);*/
 	if (needle[j + 1] == '\0')
 	{
 		haystack = haystack + i - j;
