@@ -10,28 +10,19 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, l1, l2;
+	while (*haystack != '\0')
+	{
+		char *p1 = haystack;
+		char *p2 = needle;
 
-	i = 0;
-	j = 0;
-	for (l1 = 0; needle[l1] != '\0'; l1++)
-		;
-	for (l2 = 0; haystack[l2] != '\0'; l2++)
-		;
-	while (needle[j] != '\0')/*&& (haystack[i] != '\0'))*/
-	{
-		if (needle[j] == haystack[i])
-			j++;
-		else
-			j = 0;
-		i++;
+		while (*haystack == *p2)
+		{
+			haystack++:
+				p2++;
+		}
+		if (*p2 == '\0')
+			return p1;
+		haystack = p1 + 1;
 	}
-	/*printf("\ni=%d\nj=%d\nl1=%d\nl2=%d\n", i, j, l1, l2);*/
-	if (needle[j] == '\0')
-	{
-		haystack = haystack + i - j;
-		return (haystack);
-	}
-	else
-		return ('\0');
+	return ('\0');
 }
