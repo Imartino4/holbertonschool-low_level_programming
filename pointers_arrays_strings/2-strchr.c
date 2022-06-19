@@ -9,22 +9,15 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i, j;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++) /*Obtengo largo de s - i*/
-		;
-	if (c != '\0')
+	while( s[i] != c && s[i] != '\0')
 	{
-		for (j = 0; s[j] != '\0'; j++)
-		{
-			if (s[j] == c)
-			{
-				s = s + j;
-				break;
-			}
-		}
-		if (j < i)
-			return (s);
+		i++;
+		s = s + i;
 	}
-	return (s);
+	if (s[i] == c)
+		return s;
+	else
+		return ('\0');
 }
