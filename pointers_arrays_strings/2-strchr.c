@@ -23,9 +23,8 @@ char *_strchr(char *s, char c)
 				break;
 			}
 		}
+		if (j < i)
+			return (s);
 	}
-	if (j < i && c != '\0')
-		return (s);
-	else
-		return ('\0');
+	return ('\0');
 }
