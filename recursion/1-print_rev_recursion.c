@@ -14,7 +14,8 @@ void _print_rev_recursion(char *s)
 		_putchar(*s);
 	}
 }
-/** Primero hace la recursion, cuando llega al nulo para y ejecuta todos 
+/**
+ * Primero hace la recursion, cuando llega al nulo para y ejecuta todos
  * los putchar generados
  * Si el string viene sin salto de linea no logre poner un unico salto
  */
