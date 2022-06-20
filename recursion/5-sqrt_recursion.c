@@ -2,6 +2,7 @@
 /**
  * _sqrt_recursion - returns the natural square root of n
  * @n: int
+ * @i: int
  *
  * Description -
  * Return: inr
