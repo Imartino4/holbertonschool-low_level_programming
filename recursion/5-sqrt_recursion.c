@@ -36,5 +36,5 @@ int _sqrt_aux(int n, int i)
 		return (i);
 	}
 	else
-		return (_sqrt_aux_(n, i + 1));
+		return (_sqrt_aux(n, i + 1));
 }
