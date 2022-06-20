@@ -6,17 +6,8 @@
  * Description -
  * Return: inr
  */
-int _sqrt_aux(int n, int i)
-{
-	if (i * i > n)
-		return (-1);
-	else if (i * i == n)
-	{
-		return (i);
-	}
-	else
-	return (_sqrt_aux(n, i + 1));
-}
+int _sqrt_aux(int n, int i);
+
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
@@ -27,4 +18,23 @@ int _sqrt_recursion(int n)
 	}
 	else
 		return (_sqrt_aux(n, 1));
+}
+/**
+ * _sqrt_aux - check the root sqr of n and returns it as i
+ * @n: int
+ * @i: sqr root to check
+ *
+ * Description:
+ * Return: return i if it is the root sqr of n
+ */
+int _sqrt_aux(int n, int i)
+{
+	if (i * i > n)
+		return (-1);
+	else if (i * i == n)
+	{
+		return (i);
+	}
+	else
+		return (_sqrt_aux_(n, i + 1));
 }
