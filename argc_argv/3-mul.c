@@ -3,7 +3,7 @@
 /**
  * main - multiplies the arguments
  * @argc: number of arguments
- * @arv: arrays with the arguments
+ * @argv: arrays with the arguments
  *
  * Return: 0 or 1
  */
