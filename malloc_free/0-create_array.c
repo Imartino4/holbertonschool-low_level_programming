@@ -14,17 +14,17 @@ char *create_array(unsigned int size, char c)
 	unsigned int i;
 	char *t;
 
-	t = malloc(size * sizeof(unsigned int));
-	for (i = 0; i <= size; i++)
-	{
-		t[i] = c;
-		/*printf("%s, ", t);*/
-	}
 	if (size == 0)
-	{
 		return (NULL);
-	}
 	else
+	{
+		t = malloc(size * sizeof(unsigned int));
+		for (i = 0; i < size; i++)
+		{
+			t[i] = c;
+			/*printf("%s, ", t);*/
+		}
 		return (t);
-	free(t);
+		free(t);
+	}
 }
