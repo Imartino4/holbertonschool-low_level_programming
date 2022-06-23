@@ -6,7 +6,7 @@
  * @str: string pointer
  *
  * Description -
- * Return - a pointer to the duplicate string.
+ * Return: a pointer to the duplicate string.
  */
 char *_strdup(char *str)
 {
@@ -15,22 +15,14 @@ char *_strdup(char *str)
 
 	for (i = 0; str[i]; i++)
 		;
-	/*printf("%d\n", i);*/
-	t = malloc(i + 1);
+	t = malloc(i);
+	if (t == NULL)
+		return (NULL);
 	/*Copy the string*/
 	for (j = 0; str[j] != '\0'; j++)
 	{
 		t[j] = str[j];
 	}
 	t[j] = '\0';
-	if (t == NULL)
-	{
-		return (NULL);
-	}
-	else
-	{
-		return (t);
-	}
-	free(t);
-
+	return (t);
 }
