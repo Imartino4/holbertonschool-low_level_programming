@@ -16,12 +16,18 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
+	if (s1 == NULL && s2 != NULL)
+		return (s2);
+	if (s1 != NULL && s2 == NULL)
+		return (s1);
+	else
+	{
 	/*Calculo largos de s1 y s2*/
 	for (i = 0; s1[i] != '\0'; i++)
 		;
 	for (j = 0; s2[j] != '\0'; j++)
 		;
-	t = malloc(i + j);
+	t = malloc(i + j + 1);
 	if (t == NULL)
 		return (NULL);
 	for (k = 0; s1[k]; k++)
@@ -30,4 +36,5 @@ char *str_concat(char *s1, char *s2)
 		t[k] = s2[k - i];
 	t[k] = '\0';
 	return (t);
+	}
 }
