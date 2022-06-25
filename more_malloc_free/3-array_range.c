@@ -20,6 +20,6 @@ int *array_range(int min, int max)
 	if (t == NULL)
 		return (NULL);
 	for (i = min; i <= max; i++)
-		t[i] = i;
+		t[i - min] = i;
 	return (t);
 }
