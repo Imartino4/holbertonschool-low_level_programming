@@ -15,20 +15,31 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int m, i, j;
 	char *t;
 
-	if (s1 == NULL)
-		s1[0] = '\0';
-	if (s2 == NULL)
-		s2[0] = '\0';
 	m = sizeof(s2);
 	if (n < m)
 		m = n;
 	t = malloc(sizeof(s1) + sizeof(s2) - 1);
 	if (t == NULL)
 		return (NULL);
+	if (s1 == NULL)
+	{
+		for (i = 0; s2[i] != '\0', i++)
+			t[i] = s2[i];
+		t[i] = '\0';
+	}
+	if (s2 == NULL)
+	{
+		for (i = 0; si[i] != '\0'; i++)
+			t[i] = s1[i];
+		t[i] = '\0';
+	}
+	else
+	{
 	for (i = 0; s1[i] != '\0'; i++)
 		t[i] = s1[i];
 	for (j = i; j < (i + m); j++)
 		t[j] = s2[j - i];
 	t[j] = '\0';
+	}
 	return (t);
 }
