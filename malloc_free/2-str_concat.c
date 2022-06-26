@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * str_concat - concatenate two strings and return pointer
  * @s1: pointer to string 1
@@ -11,30 +12,21 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, k;
-	char *t;
+	int i, j, k, len1 = 0, len2 = 0;
+	char *t = NULL;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-	if (s1 == NULL && s2 != NULL)
-		return (s2);
-	if (s1 != NULL && s2 == NULL)
-		return (s1);
-	else
+	if (s1)
+		len1 = strlen(s1);
+	if (s2)
+		len2 = strlen(s2)
+	t = malloc(len1 + len2 + 1);
+	if (t != NULL)
 	{
-	/*Calculo largos de s1 y s2*/
-	for (i = 0; s1[i] != '\0'; i++)
-		;
-	for (j = 0; s2[j] != '\0'; j++)
-		;
-	t = malloc(i + j + 1);
-	if (t == NULL)
-		return (NULL);
-	for (k = 0; s1[k]; k++)
-		t[k] = s1[k];
-	for (k = i; s2[k - i]; k++)
-		t[k] = s2[k - i];
-	t[k] = '\0';
-	return (t);
+		for (i = 0; i < len1; i++)
+			t[i] = s1[i];
+		for (j = i; s2[j - i]; j++)
+			t[j] = s2[j - i];
+		t[j] = '\0';
 	}
+	return (t);
 }
