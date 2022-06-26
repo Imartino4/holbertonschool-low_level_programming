@@ -37,20 +37,19 @@ char *str_concat(char *s1, char *s2)
 		for (i = 0; i < len1; i++)
 			t[i] = s1[i];
 		t[i] = '\0';
+		return (t);
 	}
 	if (s2 && s1 == NULL)
 	{
 		for (i = 0; i < len2; i++)
 			t[i] = s2[i];
 		t[i] = '\0';
+		return (t);
 	}
-	else
-	{
-		for (i = 0; i < len1; i++)
-			t[i] = s1[i];
-		for (j = i; s2[j - i]; j++)
-			t[j] = s2[j - i];
-		t[j] = '\0';
+	for (i = 0; i < len1; i++)
+		t[i] = s1[i];
+	for (j = i; s2[j - i]; j++)
+		t[j] = s2[j - i];
+	t[j] = '\0';
 	return (t);
-	}
 }
