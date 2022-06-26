@@ -22,7 +22,7 @@ char *argstostr(int ac, char **av)
 		for (j = 0; av[i][j]; j++)
 			len = len + 1;
 	}
-	n = len + ac - 1;
+	n = len + ac + 1;
 	/*printf("%d\n", n);*/
 	t = malloc(n);
 	if (t == NULL)
@@ -45,4 +45,4 @@ char *argstostr(int ac, char **av)
 	t[k] = '\0';
 	/*printf("%d\n", k);*/
 	return (t);
-}	
+}
