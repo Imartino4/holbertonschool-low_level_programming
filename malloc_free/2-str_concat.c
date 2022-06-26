@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL & s2 == NULL)
 	{
 		t[0] = '\0';
-	return t(t):
+		return (t);
 	}
 	if (s1 == NULL && s2 == NULL)
 	{
