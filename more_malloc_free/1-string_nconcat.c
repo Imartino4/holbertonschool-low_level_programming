@@ -13,11 +13,9 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int m, l, i, j;
+	unsigned int m = 0, l = 0, i, j;
 	char *t;
 
-	m = 0;
-	l = 0;
 	if (s2)
 		m = strlen(s2);
 	if (s1)
