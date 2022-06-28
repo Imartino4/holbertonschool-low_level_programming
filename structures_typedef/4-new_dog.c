@@ -19,7 +19,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (point == NULL)
 		return (NULL);
 	point->name = name;
-	dog_t.age = age;
+	point->age = age;
 	point->owner = owner;
 	free(point);
 	return (point);
