@@ -1,5 +1,6 @@
 #ifndef Dog_structure
 #define Dog_structure
+#define dog dog_t
 /**
  * struct dog - data of dogs
  * @name: pointer to string of name
