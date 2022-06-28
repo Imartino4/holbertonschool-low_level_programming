@@ -20,6 +20,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	point->name = name;
 	point->age = age;
 	point->owner = owner;
-	return (point);
 	free(point);
+	return (point);
 }
