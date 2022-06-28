@@ -1,6 +1,5 @@
 #ifndef Dog_structure
 #define Dog_structure
-#define dog dog_t
 /**
  * struct dog - data of dogs
  * @name: pointer to string of name
@@ -17,4 +16,5 @@ struct dog
 };
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
+typedef struct dog my_dog;
 #endif
