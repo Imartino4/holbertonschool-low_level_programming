@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * new_dog - creates a new variable
  * @name: pointer to string of a elementent's structure
@@ -18,7 +19,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (point == NULL)
 		return (NULL);
 	point->name = name;
-	point->age = age;
+	dog_t.age = age;
 	point->owner = owner;
 	free(point);
 	return (point);
