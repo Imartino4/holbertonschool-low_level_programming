@@ -17,7 +17,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *point;
 	char *pname;
 	char *powner;
-	int len1 = 0; len2 = 0, i, j;
+	int len1 = 0, len2 = 0;
 
 	if (name)
 		len1 = strlen(name);
@@ -41,8 +41,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	point->name = name;
 	point->age = age;
 	point->owner = owner;
-	free(point);
 	return (point);
+	free (point);
 }
 /**
  * _strdup - return a pointer no a newly allocated space in memory
