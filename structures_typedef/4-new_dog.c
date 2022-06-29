@@ -37,12 +37,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(pname);
 		return (NULL);
 	}
-	owner = _strdup(owner);
+	free(powner);
+	free(pname);
+	powner = _strdup(owner);
 	point->name = name;
 	point->age = age;
 	point->owner = owner;
+	free(point);
 	return (point);
-	free (point);
 }
 /**
  * _strdup - return a pointer no a newly allocated space in memory
