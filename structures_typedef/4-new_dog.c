@@ -24,7 +24,6 @@ char *_strdup(char *str)
 			t[j] = str[j];
 		t[j] = '\0';
 		return (t);
-		free(t);
 	}
 	else
 	{
@@ -43,29 +42,23 @@ char *_strdup(char *str)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *point;
-	char *pname;
-	char *powner;
-	int len1 = 0, len2 = 0;
 
-	len1 = strlen(name);
-	len2 = strlen(owner);
 	point = malloc(sizeof(dog_t));
 	if (point == NULL)
 		return (NULL);
-	point->name = name;
-	point->age = age;
-	point->owner = owner;
-	pname = malloc(len1);
-	if (pname == NULL)
-		return (NULL);
-	pname = _strdup(name);
-	powner = malloc(len2);
-	if (powner == NULL)
+	point->name = _strdup(name);
+	if (point->name == NULL)
 	{
-		free(powner);
+		free(res);
 		return (NULL);
 	}
-	powner = _strdup(owner);
+	point->owner = _strdup(owner);
+	if (pointer->owner == NULL)
+	{
+		free(res->name);
+		free(res);
+		return (NULL);
+	}
+	point->age = age;
 	return (point);
-	free(point);
 }
