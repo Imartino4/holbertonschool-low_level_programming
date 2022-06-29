@@ -53,7 +53,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	point->owner = _strdup(owner);
-	if (pointer->owner == NULL)
+	if (point->owner == NULL)
 	{
 		free(point->name);
 		free(point);
