@@ -33,6 +33,9 @@ void print_all(const char * const format, ...)
 						printf("(nil)");
 					printf("%s", p);
 					break;
+				default: /*Si no es ninguno de estos casos*/
+					i++;
+					continue; /*Salteate los otros pasos*/
 			}
 			if (format[i + 1] != '\0')
 				printf(", ");
