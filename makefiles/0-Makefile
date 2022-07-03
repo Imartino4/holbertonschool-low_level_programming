@@ -1,8 +1,9 @@
-0-Makefile: main.o school.o
-	gcc -o 0-Makefile main.o school.o
+school: school.o main.o
+	gcc school.o main.o -o school
 
 main.o: main.c m.h
-	gcc -c  main.c
+	gcc -c main.c
 
 school.o: school.c m.h
 	gcc -c school.c
+
