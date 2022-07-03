@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 	char *sep = ", ";/*Lo defino por la limitante de los if*/
 	char *str;
 
-	va_start(ptr, NULL);
+	va_start(ptr, format);
 	while (format[i] && format) /*Agrego && format por el caso nulo*/
 		i++;
 	while (format[j] && format)
