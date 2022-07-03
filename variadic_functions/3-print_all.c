@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 	va_start(ptr, NULL);
 	while (format[i] && format != NULL)/*Agrego && format por el caso nulo*/
 		i++;
-	while (format[j] && format != NULL
+	while (format[j] && format != NULL)
 	{
 		if (j == (i - 1))
 			sep = "";
