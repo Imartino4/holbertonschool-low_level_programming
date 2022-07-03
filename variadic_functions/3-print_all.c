@@ -3,42 +3,37 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - suma de los argumentos.
- * @format: argumentos.
- * Return: void.
+ * print_all - print everything
+ * @format: list of arguments
+ * Return: void
  */
 void print_all(const char * const format, ...)
 {
-	va_list variable;
+	va_list ptr;
 	int i = 0;
 	char *p;
+	char *sep = ", ";
 
-	va_start(variable, format);
+	va_start(ptr, NULL);
 		while (format != NULL && format[i] != '\0')
-		{
+		{i
 			switch (format[i])
 			{
-				case('c'):
-					printf("%c", va_arg(variable, int));
+				case('c'):/*El char pasa a int*/
+					printf("%d", va_arg(ptr, int));
 					break;
 				case('i'):
-					printf("%i", va_arg(variable, int));
+					printf("%i", va_arg(ptr, int));
 					break;
-				case('f'):
-					printf("%f", va_arg(variable, double));
+				case('f'):/*El float pasa a double*/
+					printf("%f", va_arg(ptr, double));
 					break;
 				case('s'):
-					p = va_arg(variable, char *);
+					p = va_arg(ptr, char *);
 					if (p == NULL)
-					{
 						printf("(nil)");
-						break;
-					}
 					printf("%s", p);
 					break;
-				default:
-					i++;
-					continue;
 			}
 			if (format[i + 1] != '\0')
 				printf(", ");
