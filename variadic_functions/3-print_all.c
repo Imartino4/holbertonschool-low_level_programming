@@ -15,9 +15,9 @@ void print_all(const char * const format, ...)
 	char *str;
 
 	va_start(ptr, NULL);
-	while (format[i])
+	while (format[i] && format) /*Agrego && format por el caso nulo*/
 		i++;
-	while (format[j])
+	while (format[j] && format)
 	{
 		if (j == (i - 1))
 			sep = "";
