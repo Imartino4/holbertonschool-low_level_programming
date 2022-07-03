@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 
 	va_start(ptr, NULL);
 		while (format != NULL && format[i] != '\0')
-		{i
+		{
 			switch (format[i])
 			{
 				case('c'):/*El char pasa a int*/
