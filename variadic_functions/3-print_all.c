@@ -1,46 +1,49 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
+
 /**
- * print_all - prints anything
- * @format: a list of types of arguments passed to the function
- *
- * Return: void
+ * print_all - suma de los argumentos.
+ * @format: argumentos.
+ * Return: void.
  */
 void print_all(const char * const format, ...)
 {
-	va_list ptr;
-	int i = 0, j = 0;
-	char *sep = ", ";/*Lo defino por la limitante de los if*/
-	char *str;
+	va_list variable;
+	int i = 0;
+	char *p;
 
-	va_start(ptr, NULL);
-	while (format[i] != '\0' && format != NULL)
-		i++;
-	while (format[j] != '\0' && format != NULL)
-	{
-		if (j == (i - 1))
-			sep = "";
-		switch (format[j])
+	va_start(variable, format);
+		while (format != NULL && format[i] != '\0')
 		{
-			case 'c':/*El char pasa a ser int-ver-*/
-				printf("%c%s", va_arg(ptr, int), sep);
-				break;
-			case 'i':
-				printf("%d%s", va_arg(ptr, int), sep);
-				break;
-			case 'f':/*Float pasa a double*/
-				printf("%f%s", va_arg(ptr, double), sep);
-				break;
-			case 's':
-				str = va_arg(ptr, char *);
-				if (str == NULL)
-					str = "(nil)";
-				printf("%s%s", str, sep);
-				break;
+			switch (format[i])
+			{
+				case('c'):
+					printf("%c", va_arg(variable, int));
+					break;
+				case('i'):
+					printf("%i", va_arg(variable, int));
+					break;
+				case('f'):
+					printf("%f", va_arg(variable, double));
+					break;
+				case('s'):
+					p = va_arg(variable, char *);
+					if (p == NULL)
+					{
+						printf("(nil)");
+						break;
+					}
+					printf("%s", p);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			if (format[i + 1] != '\0')
+				printf(", ");
+			i++;
 		}
-		j++;
-	}
 	printf("\n");
-	va_end(ptr);
+	va_end(variable);
 }
