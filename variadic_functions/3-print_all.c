@@ -15,7 +15,7 @@ void print_all(const char * const format, ...)
 	char *str;
 
 	va_start(ptr, format);
-	while (format[i] && format) /*Agrego && format por el caso nulo*/
+	while (format[i] && format != NULL)/*Agrego && format por el caso nulo*/
 		i++;
 	while (format && j < i)
 	{
