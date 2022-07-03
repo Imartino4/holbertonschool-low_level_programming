@@ -1,3 +1,6 @@
+.PHONY: all
+	all: school	
+
 school: school.o main.o
 	gcc school.o main.o -o school
 
