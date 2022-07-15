@@ -15,7 +15,7 @@ void free_list(list_t *head)
 		while (new != NULL)
 		{
 			free(aux->str); /*strdup usa malloc*/
-			free(new);
+			free(aux);
 			aux = new;
 			new = new->next;
 		}
