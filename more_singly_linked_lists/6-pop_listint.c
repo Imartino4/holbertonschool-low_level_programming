@@ -10,7 +10,7 @@ int pop_listint(listint_t **head)
 	listint_t *aux = *head;
 
 	if (*head == NULL)
-		return (NULL);
+		return (0);
 	h_data = aux->n;
 	*head = aux->next;
 	free(aux);
