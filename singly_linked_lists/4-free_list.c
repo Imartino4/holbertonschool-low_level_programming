@@ -21,4 +21,5 @@ void free_list(list_t *head)
 		}
 		free(aux->str);
 		free(aux);
+	}
 }
