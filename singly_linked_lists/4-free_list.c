@@ -6,16 +6,19 @@
  */
 void free_list(list_t *head)
 {
-	list_t *aux;
-	size_t i = 0, max = list_len(head);
-	
-	while (i < max)
+	list_t *aux, *new;
+
+	if (head)
 	{
 		aux = head;
-		while (aux->next)
-			aux = aux->next;
+		new = head->next;
+		while (new != NULL)
+		{
+			free(aux->str); /*strdup usa malloc*/
+			free(new);
+			aux = new;
+			new = new->next;
+		}
 		free(aux->str);
 		free(aux);
-		i++;
-	}
 }
