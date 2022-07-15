@@ -33,6 +33,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		count++;
 	}
 	aux2->next = aux1->next;
+	free(aux1);
 	aux1 = NULL;
 	return (1);
 }
