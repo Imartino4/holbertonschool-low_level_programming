@@ -6,7 +6,7 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_ t count;
+	size_t count;
 
 	if (h)
 	{
@@ -16,5 +16,5 @@ size_t print_listint(const listint_t *h)
 			h = h->next;
 		}
 	}
-	return (count)
+	return (count);
 }
