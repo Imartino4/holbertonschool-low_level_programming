@@ -4,15 +4,13 @@
  * @head: pointer to list
  * @idx: index to add the node
  * @n: data of the node
- * Returni
+ * Return: address of new node or NULL
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	unsigned int count = 0;
 	listint_t *aux = *head, *new;
 
-	if (aux == NULL)
-		return (NULL);
 	if (idx == 0) /*Make header*/
 	{
 		new = malloc(sizeof(listint_t));
@@ -23,19 +21,20 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new;
 		return (new);
 	}
-	for (count = 0; aux; count++)
+	while (aux && cont != (idx - 1))
 	{
-		if (count == idx - 1)
-		{
-			new = malloc(sizeof(listint_t));
-			if (new == NULL)
-				return (NULL);
-			new->n = n;
-			new->next = aux->next;
-			aux->next = new;
-			return (new);
-		}
+		count++;
 		aux = aux->next;
+	}
+	if (count == idx - 1 && aux)
+	{
+		new = malloc(sizeof(listint_t));
+		if (new == NULL)
+			return (NULL);
+		new->n = n;
+		new->next = aux->next;
+		aux->next = new;
+		return (new);
 	}
 	return (NULL);
 }
