@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * add_nodeint_end - adds a mew node at the end of a list
  * @head: pointer to pointer to the first element of a list
