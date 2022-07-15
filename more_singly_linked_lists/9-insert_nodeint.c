@@ -21,7 +21,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new;
 		return (new);
 	}
-	while (aux && cont != (idx - 1))
+	while (aux && count != (idx - 1))
 	{
 		count++;
 		aux = aux->next;
