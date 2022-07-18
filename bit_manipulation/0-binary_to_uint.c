@@ -8,22 +8,21 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int count = 0, pow = 1;
-	int len = 0;
+	int i = 0, len;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
-	while (b[len])
-		len++;		
-	while (len - 1 >= 0)
+	while (b[i])
+		i++;
+	len = i - 1;	
+	while (len >= 0)
 	{
-		if (b[len] == '1')
-		{
-			count = count + pow;
-		}
 		if (b[len] != '0' && b[len] != '1')
 		{
 			return (0);
 		}
+		if (b[len] == '1')
+			count += pow;
 		len--;
 		pow = pow * 2;
 	}
