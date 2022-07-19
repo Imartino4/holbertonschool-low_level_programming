@@ -7,7 +7,7 @@ void print_binary(unsigned long int n)
 {
 	int count = 0, i;
 	unsigned long int n_aux;
-	
+
 	n_aux = n;
 
 	if (n == 0)
@@ -24,7 +24,7 @@ void print_binary(unsigned long int n)
 	{
 		count++;
 		n_aux = n_aux >> 1;
-	}	
+	}
 	for (i = count; i >= 0; i--)
 	{
 		if (n >> i & 1)
