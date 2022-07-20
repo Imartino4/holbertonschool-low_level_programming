@@ -7,7 +7,8 @@
  */
 int main(int argc, char **argv)
 {
-	int fd_from, fd_to;
+	int fd_from, fd_to, r;
+	char buffer[1024];
 
 	if (argc != 3)/*Number of argument incorrect*/
 	{
