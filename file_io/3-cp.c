@@ -31,4 +31,3 @@ int main(int argc, char **argv)
 	if (close(fd_to))
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to), exit(100);
 	return (0);
-
