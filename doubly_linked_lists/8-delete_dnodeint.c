@@ -21,7 +21,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	for (count = 0; aux && count < index - 1; count++)
 	{
-		if (aux = NULL || aux->next == NULL)
+		if (aux == NULL || aux->next == NULL)
 			return (-1);
 		aux = aux->next;
 	}
