@@ -34,7 +34,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (new_node);
 	}
 	/*Traverse the list until idx -1)*/
-	while (aux && count < idx - 1)
+	while (aux && count != idx - 1)
 	{
 		count++;
 		aux = aux->next;
