@@ -8,7 +8,7 @@
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new_last_node = malloc(sizeof(dlistint_t));
-	dlistint_t *aux = *head;/*aux needed to traverse the list*/:::
+	dlistint_t *aux = *head;/*aux needed to traverse the list*/
 
 	if (new_last_node == NULL)
 		return (NULL);
@@ -24,7 +24,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		aux = aux->next;/*Traverse the list*/
 
 	aux->next = new_last_node;/*Link last node to new_last_node*/
-	new_node_last->prev = aux;/*Link new_last_node to last node*/
+	new_last_node->prev = aux;/*Link new_last_node to last node*/
 
 	return (new_last_node);
 }
