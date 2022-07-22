@@ -10,7 +10,8 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	dlistint_t *aux = head;
 	unsigned int count = 0;
 
-	while (aux->next != NULL && count != index)
+	/*Traverse the list*/
+	while (aux != NULL && count < index)
 	{
 		count++;
 		aux = aux->next;
