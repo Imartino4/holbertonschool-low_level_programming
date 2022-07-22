@@ -4,7 +4,7 @@
  * @head: pointer to first element of a list
  * Return: void
  */
-free_dlistint(dlistint_t *head)
+void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *aux = head;
 
