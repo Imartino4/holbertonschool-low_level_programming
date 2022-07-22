@@ -12,6 +12,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 
 	if (new_last_node == NULL)
 		return (NULL);
+
 	new_last_node->next = NULL;
 	new_last_node->n = n;
 	if (*head == NULL) /*If list is empty, new_node will be the head*/
@@ -20,7 +21,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		*head = new_last_node;
 		return (new_last_node);
 	}
-	while (aux)
+	while (aux->next)
 		aux = aux->next;/*Traverse the list*/
 
 	aux->next = new_last_node;/*Link last node to new_last_node*/
