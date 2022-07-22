@@ -29,16 +29,17 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (new_node);
 	}
 	/*Traverse the list until idx -1)*/
-	while (count < idx - 1)
+	while (aux && count < idx - 1)
 	{
-		if (aux->next)
-		{
-			count++;
-			aux = aux->next;
-		}
+		count++;
+		aux = aux->next;
 	}
-	new_node->prev = aux;
-	new_node->next = aux->next;
-	aux->next = new_node;
-	return (new_node);
+	if (count == idx - 1 && aux)
+	{
+		new_node->prev = aux;
+		new_node->next = aux->next;
+		aux->next = new_node;
+		return (new_node);
+	}
+	return (NULL);
 }
