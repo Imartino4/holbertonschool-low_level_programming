@@ -14,4 +14,5 @@ void free_dlistint(dlistint_t *head)
 		free(aux);
 		aux = head;
 	}
+	free(aux);
 }
