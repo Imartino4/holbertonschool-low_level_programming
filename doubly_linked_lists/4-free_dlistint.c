@@ -6,13 +6,17 @@
  */
 void free_dlistint(dlistint_t *head)
 {
+	/*aux to traverse the list without loose the links*/
 	dlistint_t *aux = head;
 
-	while (aux->next)
+	if (head)/*If head = NULL nothing to free*/
 	{
-		head = aux->next;
+		while (aux->next)
+		{
+			head = aux->next;
+			free(aux);/*free nodes while traverse the list*/
+			aux = head;
+		}
 		free(aux);
-		aux = head;
 	}
-	free(aux);
 }
