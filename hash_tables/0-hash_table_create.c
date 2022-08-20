@@ -16,7 +16,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (ht == NULL)
 		return (NULL);
 	ht->size = size;
-	/*The array consist in size elements which are head pointer to hash_node_t list*/
+	/*The array consist in size elements of head pointer to hash_node_t list*/
 	ht->array = malloc(size * sizeof(hash_node_t **));
 	if (ht->array == NULL)
 	{
@@ -26,5 +26,5 @@ hash_table_t *hash_table_create(unsigned long int size)
 	/*Set pointers to NULL*/
 	for (i = 0; i < size; i++)
 		ht->array[i] = NULL;
-	return(ht);
-}	
+	return (ht);
+}
