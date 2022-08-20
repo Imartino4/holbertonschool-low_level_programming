@@ -3,7 +3,7 @@
 /**
  * hash_table_set - adds an element to the hash table
  * @ht: the hash table to update
- * @key_ the key, cannot be an empty string
+ * @key: the key, cannot be an empty string
  * @value: value associated with the key, must be duplicated and can be empty
  * Return: 1 in success, 0 otherwise.
  */
@@ -12,7 +12,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	hash_node_t *new_elem = NULL;
 	char *key_copy = NULL, *value_copy = NULL;
-
+	
+	if (ht == NULL)
+		return(0);
 	new_elem = malloc(sizeof(hash_node_t));
 	if (new_elem == NULL)
 	{
