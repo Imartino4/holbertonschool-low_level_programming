@@ -7,10 +7,21 @@
  */
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *ht;
+	hash_table_t *ht = NULL;
+	unsigned long int i = 0;
 
-	ht = malloc(size * sizeof(char *));
+	/*Memory for table structure: size and array*/
+       /*an unsigned long int and a pointer array for node's structure*/
+	ht = malloc(sizeof(hash_table_t));
 	if (ht == NULL)
 		return (NULL);
-	return (ht);
+	ht->size = size;
+	/*The array consist in size elements which are head pointer to hash_node_t list*/
+	ht->array = malloc(size * sizeof(hash_node_t **));
+	if (ht->array == NULL)
+	{
+		free(ht);
+		return (NULL);
+	}
+	return(ht);
 }	
