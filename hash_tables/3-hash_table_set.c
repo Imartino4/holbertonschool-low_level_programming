@@ -12,9 +12,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	hash_node_t *new_elem = NULL;
 	char *key_copy = NULL, *value_copy = NULL;
-	
+
 	if (ht == NULL)
-		return(0);
+		return (0);
 	new_elem = malloc(sizeof(hash_node_t));
 	if (new_elem == NULL)
 	{
@@ -26,15 +26,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_elem->key = key_copy;
 	new_elem->value = value_copy;
 	index = key_index((unsigned char *)key_copy, ht->size);/*casteo key*/
-	if (ht->array[index] == NULL)
+	if (ht->array[index] == NULL)/*First element to add*/
 	{
 		ht->array[index] = new_elem;
 		new_elem->next = NULL;
 	}
-	else
+	else/*The index position has an element*/
 	{
-		new_elem->next = ht->array[index];
-		ht->array[index] = new_elem;
+		if (strcmp(ht->array[index]->key, value_copy) == 0)
+		{/*if the new_el has the same value as the actual, remove*/
+			free(ht->array[index]->value);
+			ht->array[index]->value = value_copy
+		}
+		else
+		{/*If the new_el has different key, add at the begging without removing the actual*/
+			new_elem->next = ht->array[index];
+			ht->array[index] = new_elem;
+		}
 	}
 	return (1);
 }
