@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-
 /**
  * hash_table_set - adds an element to the hash table
  * @ht: the hash table to update
