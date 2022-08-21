@@ -5,7 +5,7 @@
  * @key: the key, cannot be an empty string
  * @value: value associated with the key, must be duplicated and can be empty
  * Return: 1 in success, 0 otherwise.
- * Description: In case of collision the new element has the same key as the 
+ * Description: In case of collision the new element has the same key as the
  * actual, then remove the actual. If the keys are different, add the new
  * element at the beggining of the linked list
  */
