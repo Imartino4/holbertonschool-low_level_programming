@@ -36,7 +36,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(ht->array[index]->key, value_copy) == 0)
 		{/*if the new_el has the same value as the actual, remove*/
 			free(ht->array[index]->value);
-			ht->array[index]->value = value_copy
+			ht->array[index]->value = value_copy;
 		}
 		else
 		{/*If the new_el has different key, add at the begging without removing the actual*/
