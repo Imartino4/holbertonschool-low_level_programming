@@ -4,7 +4,7 @@
  * binary_search - searches an int value in a sorted array using binary search
  * @array: pointer to a ascending order sorted array
  * @size: array's size
- * @vallue: value to search for
+ * @value: value to search for
  * Return: index where value is, otherwise -1.
  */
 
