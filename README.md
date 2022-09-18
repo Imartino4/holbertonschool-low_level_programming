@@ -1,4 +1,4 @@
- Programming in C
+ <h1>Programming in C</h1>
 
 - Hello_World: Compilation Process in C
 - Variables_if_else_while: If/else statements, arithmetic operators, while loops
