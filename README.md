@@ -1,26 +1,26 @@
  <h1>Programming in C</h1>
 
-- Hello_World: Compilation Process in C
-- Variables_if_else_while: If/else statements, arithmetic operators, while loops
-- Functions_nested_loops: Header files, basic functions
-- Debugging: debugging manual methods, error messages
-- More_functions_nested_loops: 
-- Pointers_arrays_strings: Memory Layout, program functions using pointers, arrays and strings. Replicate string functions.                              Pointer to pointer, multidimensional arrays
-- Recursion: Program functions using recursion
-- Static_libraries: Create and use static libraries, usage: ar/ranlib/nm
-- Argc_argv: Use arguments passed to a program
-- Malloc_free: Dynamic memory allocation. 
-- More_malloc_free: Dynamic memory allocation, use of calloc and realloc
-- Preprocessor: Use of macros, guard header files, Preprocessor directives
-- Structures_typedef - Use of structures and typedef
-- Functions_pointers: Pointer to functions
-- Variadic_functions: Use of variadic functions: va_start, va_arg, va_end. Const type
-- Makefiles: Explicit and implicit rules, variables
-- Singly_linked_list: How to use and build linked list. Add operations
-- More_singly_linked_list: More operations with linked list
-- Bit_manipulation: Manipulate bits and bitwise operators
-- File_io: File descriptors, open/write/read/close/dprintf functions
-- Doubly_linked_list: Operation with doubly linked list
-- Hash_tables: Hash functions, collision. Work with hash tables
-- Search_algorithms: Program different search algorithms
-- Stacks_queues, sorting algorithms and binary trees in differents repositories. 
+- <b><H3>Hello_World:</H3></b>Compilation Process in C
+- <b><H3>Variables_if_else_while:</b></H3> If/else statements, arithmetic operators, while loops
+- <b><H3>Functions_nested_loops:</b></H3> Header files, basic functions
+- <b><H3>Debugging:</b></H3> debugging manual methods, error messages
+- <b><H3>More_functions_nested_loops:</b></H3>  
+- <b><H3>Pointers_arrays_strings:</b></H3> Memory Layout, program functions using pointers, arrays and strings. Replicate string functions. Pointer to pointer, multidimensional arrays
+- <b><H3>Recursion:</b></H3> Program functions using recursion
+- <b><H3>Static_libraries:</b></H3> Create and use static libraries, usage: ar/ranlib/nm
+- <b><H3>Argc_argv:</b></H3> Use arguments passed to a program
+- <b><H3>Malloc_free:</b></H3> Dynamic memory allocation. 
+- <b><H3>More_malloc_free:</b></H3> Dynamic memory allocation, use of calloc and realloc
+- <b><H3>Preprocessor:</b></H3> Use of macros, guard header files, Preprocessor directives
+- <b><H3>Structures_typedef</b></H3> - Use of structures and typedef
+- <b><H3>Functions_pointers:</b></H3> Pointer to functions
+- <b><H3>Variadic_functions:</b></H3> Use of variadic functions: va_start, va_arg, va_end. Const type
+- <b><H3>Makefiles:</H3></b> Explicit and implicit rules, variables
+- <b><H3>Singly_linked_list:</H3></b> How to use and build linked list. Add operations
+- <b><H3>More_singly_linked_list:</H3></b> More operations with linked list
+- <b><H3>Bit_manipulation:</H3></b> Manipulate bits and bitwise operators
+- <b><H3>File_io:</H3></b> File descriptors, open/write/read/close/dprintf functions
+- <b><H3>Doubly_linked_list:</H3></b> Operation with doubly linked list
+- <b><H3>Hash_tables:</H3></b> Hash functions, collision. Work with hash tables
+- <b><H3>Search_algorithms:</H3></b> Program different search algorithms
+- <b><H3>Stacks_queues, sorting algorithms and binary trees in differents repositories. </H3>
