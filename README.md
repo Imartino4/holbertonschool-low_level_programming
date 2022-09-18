@@ -1,2 +1,26 @@
-Introduction to C
+ Programming in C
 
+- Hello_World: Compilation Process in C
+- Variables_if_else_while: If/else statements, arithmetic operators, while loops
+- Functions_nested_loops: Header files, basic functions
+- Debugging: debugging manual methods, error messages
+- More_functions_nested_loops: 
+- Pointers_arrays_strings: Memory Layout, program functions using pointers, arrays and strings. Replicate string functions.                              Pointer to pointer, multidimensional arrays
+- Recursion: Program functions using recursion
+- Static_libraries: Create and use static libraries, usage: ar/ranlib/nm
+- Argc_argv: Use arguments passed to a program
+- Malloc_free: Dynamic memory allocation. 
+- More_malloc_free: Dynamic memory allocation, use of calloc and realloc
+- Preprocessor: Use of macros, guard header files, Preprocessor directives
+- Structures_typedef - Use of structures and typedef
+- Functions_pointers: Pointer to functions
+- Variadic_functions: Use of variadic functions: va_start, va_arg, va_end. Const type
+- Makefiles: Explicit and implicit rules, variables
+- Singly_linked_list: How to use and build linked list. Add operations
+- More_singly_linked_list: More operations with linked list
+- Bit_manipulation: Manipulate bits and bitwise operators
+- File_io: File descriptors, open/write/read/close/dprintf functions
+- Doubly_linked_list: Operation with doubly linked list
+- Hash_tables: Hash functions, collision. Work with hash tables
+- Search_algorithms: Program different search algorithms
+- Stacks_queues, sorting algorithms and binary trees in differents repositories. 
